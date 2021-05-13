@@ -1,11 +1,13 @@
-import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
+import { WindowSizeContextProvider } from "../components/WindowSizeContext";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <WindowSizeContextProvider>
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </WindowSizeContextProvider>
   );
 }
 
