@@ -1,18 +1,12 @@
-import { useRef } from "react";
 import { Container, Flex, Text } from "@chakra-ui/react";
 import PageHeight from "../components/PageHeight";
 import macOutline from "../public/mac-outline-animation-data.json";
 import Lottie from "../components/Lottie";
-import { useScroll } from "react-use";
 
 export default function Home() {
-  const scrollRef = useRef();
-  const { x, y } = useScroll(scrollRef);
-  console.log(`${x}, ${y}`);
   return (
     <>
       <PageHeight
-        ref={scrollRef}
         position="fixed"
         top={0}
         left={0}
