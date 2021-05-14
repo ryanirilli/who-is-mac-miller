@@ -1,10 +1,11 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { WindowSizeContextProvider } from "../components/WindowSizeContext";
+import theme from "../design-system/theme";
 
 function MyApp({ Component, pageProps }) {
   return (
     <WindowSizeContextProvider>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
     </WindowSizeContextProvider>
