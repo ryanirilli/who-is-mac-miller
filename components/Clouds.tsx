@@ -42,6 +42,7 @@ function Cloud({
     <group {...props}>
       <group position={[0, 0, (segments / 2) * length]} ref={group}>
         {clouds.map(({ x, y, scale, density }, index) => (
+          // @ts-expect-error
           <Billboard
             key={index}
             scale={[scale, scale, scale]}
