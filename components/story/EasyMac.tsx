@@ -32,7 +32,7 @@ export default function EasyMac() {
         animate={controls}
         transition={{ duration: 2, ease: "easeOut" }}
       >
-        <Container w="container.lg">
+        <Container>
           <Flex direction="column" align="center">
             <Lottie
               transform="translateY(-24px)"
