@@ -11,15 +11,18 @@ export type HandleLottieScroll = (
 interface Props extends BoxProps {
   lottieOptions: Partial<AnimationConfigWithData>;
   handleScroll?: HandleLottieScroll;
+  shouldPlay?: boolean;
 }
 
 export default function Lottie({
   lottieOptions = {} as AnimationConfigWithData,
   handleScroll,
+  shouldPlay,
   ...rest
 }: Props): JSX.Element {
   const lottieRef = useRef<AnimationItem>(null);
   const conatinerRef = useRef<HTMLDivElement>();
+
   useWindowScroll((scrollVal) => {
     handleScroll && handleScroll(scrollVal, lottieRef.current);
   });
@@ -33,6 +36,12 @@ export default function Lottie({
       lottieRef.current.destroy();
     };
   }, []);
+
+  useEffect(() => {
+    if (shouldPlay && lottieRef.current) {
+      lottieRef.current.play();
+    }
+  }, [shouldPlay]);
 
   return <Box ref={conatinerRef} {...rest} />;
 }

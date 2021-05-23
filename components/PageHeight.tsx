@@ -4,5 +4,5 @@ import { Box, BoxProps } from "@chakra-ui/react";
 
 export default function PageHeight(props: BoxProps): JSX.Element {
   const { height } = useContext(WindowSizeContext);
-  return <Box {...props} h={height} />;
+  return <Box {...props} minH={height} />;
 }
