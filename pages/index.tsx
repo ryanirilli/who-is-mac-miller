@@ -3,7 +3,9 @@ import PageHeight from "../components/PageHeight";
 import macOutline from "../public/mac-outline-animation-data.json";
 import Intro from "../components/story/Intro";
 import EasyMac from "../components/story/EasyMac";
+import BlueSlidePark from "../components/story/BlueSlidePark";
 import Lottie, { HandleLottieScroll } from "../components/Lottie";
+import AnimatedClip from "../components/AnimatedClip";
 import { scaleLinear } from "d3-scale";
 
 let scale;
@@ -17,6 +19,8 @@ const handleScroll: HandleLottieScroll = (scrollVal, player) => {
   player.goToAndStop(player.totalFrames - val, true);
 };
 
+const delay = 1;
+
 export default function Home() {
   return (
     <>
@@ -29,18 +33,32 @@ export default function Home() {
         <Container maxW="container.lg">
           <Flex direction={["column", null, "row"]}>
             <Flex alignItems="center" flex={1} pl={[4, null, 0]}>
-              <Text as="h1" textStyle="h2" w="100%" textAlign="left">
-                <Box as="span" display="inline-block" mb={4} fontFamily="edita">
-                  who is
-                </Box>{" "}
-                <br />
-                <Box as="span" textStyle="h1Bold">
-                  Mac Miller?
-                </Box>
-              </Text>
+              <Box>
+                <AnimatedClip animationTransition={{ delay }}>
+                  <Text
+                    as="h1"
+                    textStyle="h1"
+                    fontFamily="edita"
+                    letterSpacing="-4px"
+                    transform="translateX(16px)"
+                  >
+                    who is
+                  </Text>
+                </AnimatedClip>
+                <AnimatedClip
+                  p={2}
+                  animationTransition={{ delay: delay + 0.3 }}
+                >
+                  <Text as="h1" textStyle="h2" w="100%" textAlign="left">
+                    <Box as="span" textStyle="h1Bold">
+                      Mac Miller?
+                    </Box>
+                  </Text>
+                </AnimatedClip>
+              </Box>
             </Flex>
             <Lottie
-              maxW="600px"
+              maxW="550px"
               lottieOptions={{
                 loop: false,
                 animationData: macOutline,
@@ -52,6 +70,7 @@ export default function Home() {
       </PageHeight>
       <Intro />
       <EasyMac />
+      <BlueSlidePark />
       <Container>
         <Text textStyle="h1" my={16}>
           I just make, whatever I wanna make, and then I just like...try and,

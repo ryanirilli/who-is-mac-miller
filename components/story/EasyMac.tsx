@@ -13,7 +13,6 @@ export default function EasyMac() {
     if (isShowing) {
       controls.start({
         opacity: 1,
-        y: 0,
       });
     }
   }, [isShowing, controls]);
@@ -28,7 +27,7 @@ export default function EasyMac() {
       }}
     >
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0 }}
         animate={controls}
         transition={{ duration: 2, ease: "easeOut" }}
       >
@@ -56,13 +55,13 @@ export default function EasyMac() {
           </Flex>
           <Box textStyle="p">
             <Text my={16}>
-              At just 15 years old, Mac realesed his first mixtape. It's pretty
-              much what you'd expect from a teenage white basement-rap kid who
-              entrenched himself in hip hop culture. By and large, it's
-              adolescent nonsense on top of garden variety beats. Ignoring the
-              production quality or the amatuer delivery, he was still able to
-              demonstrate at a young age that he was fully engaged in the craft
-              of making authentic rap music.
+              At just 15 years old, Mac realesed his first mixtape. Ignoring the
+              production quality or the unrefined delivery, this is adolescent
+              Mac putting his hat in the ring with his contemporaries,
+              establishing his ability to both craft a flow and construct a
+              sound that is unique to him. He isn't coopting a culture he knows
+              nothing about, he's delivering his style that is both fun and
+              interesting at the same time.
             </Text>
           </Box>
         </Container>
