@@ -27,7 +27,7 @@ export default function AnimatedClip({
     >
       <motion.div
         animate={controls}
-        initial={{ y: 100 }}
+        initial={{ y: 150 }}
         transition={{
           duration: 2,
           ease: "easeOut",

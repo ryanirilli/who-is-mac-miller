@@ -32,7 +32,7 @@ export default function Home() {
       >
         <Container maxW="container.lg">
           <Flex direction={["column", null, "row"]}>
-            <Flex alignItems="center" flex={1} pl={[4, null, 0]}>
+            <Flex alignItems="center" flex={1}>
               <Box>
                 <AnimatedClip animationTransition={{ delay }}>
                   <Text
