@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Lottie from "../Lottie";
-import { Box, Container, Text, Flex, Fade } from "@chakra-ui/react";
+import { Box, Container, Text, Flex } from "@chakra-ui/react";
 import timelineDot from "../../public/timeline-dot.json";
 import IntersectionObserver from "../IntersectionObserver";
 import { motion, useAnimation } from "framer-motion";
@@ -56,12 +56,11 @@ export default function EasyMac() {
           <Box textStyle="p">
             <Text my={16}>
               At just 15 years old, Mac realesed his first mixtape. Ignoring the
-              production quality or the unrefined delivery, this is adolescent
-              Mac putting his hat in the ring with his contemporaries,
-              establishing his ability to both craft a flow and construct a
-              sound that is unique to him. He isn't coopting a culture he knows
-              nothing about, he's delivering his style that is both fun and
-              interesting at the same time.
+              production quality or the unrefined delivery, you have to respect
+              a young man who had certainly found his calling in music and
+              enough ambition to produce something listenable. This early
+              footprint is the foundation on which he would grow and mature as a
+              professional artist, and set the stage for the his mass following.
             </Text>
           </Box>
         </Container>

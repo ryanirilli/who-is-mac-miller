@@ -16,6 +16,7 @@ export default function AnimatedClip({
   useEffect(() => {
     controls.start({
       y: 0,
+      opacity: 1,
     });
   });
   return (
@@ -27,7 +28,7 @@ export default function AnimatedClip({
     >
       <motion.div
         animate={controls}
-        initial={{ y: 150 }}
+        initial={{ y: 25, opacity: 0 }}
         transition={{
           duration: 2,
           ease: "easeOut",
